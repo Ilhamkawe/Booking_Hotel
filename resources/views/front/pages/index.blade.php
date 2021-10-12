@@ -20,24 +20,20 @@
 	<!-- tels -->
 	<div class="tels">
 		<div class="container">
+			@foreach ($type as $t)
 			<div class="col-md-4 tels-left">
-				<h4>Single room <span>110$</span></h4>
-				<img src="assets/images/4.jpg" class="img-responsive" alt="">
-				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+				<h4>{{ $t->name }}<span> {{$t->price}}</span></h4>
+				@if ($t->image != "")
+				<img src="{{$t->image}}" class="img-responsive" alt="">
+				@else
+				<img src="/assets/images/img404.png" class="img-responsive" alt="">
+				@endif
+				<div class="text" style="height: 180px; overflow: hidden;">
+					<p >{{ $t->short_desc}}</p>
+				</div>
 				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
-			</div>
-			<div class="col-md-4 tels-left">
-				<h4>Double room <span>150$</span></h4>
-				<img src="assets/images/9.jpg" class="img-responsive" alt="">
-				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
-				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
-			</div>
-			<div class="col-md-4 tels-left">
-				<h4>Private room <span>200$</span></h4>
-				<img src="assets/images/3.jpg" class="img-responsive" alt="">
-				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
-				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
-			</div>
+			</div>				
+			@endforeach
 			<div class="clearfix"></div>
 		</div>
 	</div>

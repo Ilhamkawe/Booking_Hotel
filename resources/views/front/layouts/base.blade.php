@@ -37,11 +37,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!--/.navbar-header-->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="rooms.html">Rooms</a></li>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="{{route("room.index")}}">Rooms</a></li>
 								<li><a href="offers.html">Offers</a></li>
 								<li><a href="shortcodes.html">Short Codes</a></li>
-								<li><a href="signin.html">Sign In</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>

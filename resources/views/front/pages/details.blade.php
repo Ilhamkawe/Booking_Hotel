@@ -1,20 +1,27 @@
 @extends('front.layouts.base')
 
 @section('content')
+	
     <!-- details -->
 	<div class="details">
 		<div class="container">
 			<div class="col-md-7 details-left">
-				<img src="images/16.jpg" class="img-responsive" alt="">
+				@if ($type[0]->image != "")
+				<img src="{{$type[0]->image}}" class="img-responsive" alt="">
+				@else
+				<img src="/assets/images/img404.png" class="img-responsive" alt="">
+				@endif
 			</div>
 			<div class="col-md-5 details-right">
-				<span><strong>€ 250</strong> € 300 per guest</span>
-				<li>perks1,perks2</li>
-				<p> Short Description</p>
+				<span><strong>Rp.{{$type[0]->price}}</strong></span>
+				@foreach ($type[0]->perks as $perk)
+				<li>{{$perk}}</li>
+				@endforeach
+				<p>{{ $type[0]->short_desc}}</p>
 			</div>
 			<div class="clearfix"> </div>
 			<div class="details-top">
-				<h1>Detail</h1>
+				{{ $type[0]->details}}
 			</div>
 			<div class="booking-form">
 				 <div class="col-md-6">			 

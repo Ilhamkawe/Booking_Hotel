@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TypeModel;
 
 class Roomcontroller extends Controller
 {
@@ -13,7 +14,8 @@ class Roomcontroller extends Controller
      */
     public function index()
     {
-        //
+        $dataType = typeModel::all();
+        return view("front.pages.rooms")->with(["type" => $dataType]);
     }
 
     /**
@@ -24,6 +26,7 @@ class Roomcontroller extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
@@ -44,8 +47,11 @@ class Roomcontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        // ! select * from room_type where id = $id;
+        $dataType = TypeModel::where("ID",$id)->get();
+        $dataType[0]->perks = explode(",",$dataType[0]->perks); 
+        return view("front.pages.details")->with(["type" => $dataType]);
     }
 
     /**
