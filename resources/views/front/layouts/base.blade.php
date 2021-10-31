@@ -40,21 +40,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li class="active"><a href="/">Home</a></li>
 								<li><a href="{{route("room.index")}}">Rooms</a></li>
 								<li><a href="offers.html">Offers</a></li>
-								<li><a href="shortcodes.html">Short Codes</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="/contact">Contact</a></li>
 							</ul>
 						</div>
 						<!--/.navbar-collapse-->
 					</nav>
-				<div class="search-box">
-					<div id="sb-search" class="sb-search">
-						<form>
-							<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-							<input class="sb-search-submit" type="submit" value="">
-							<span class="sb-icon-search"> </span>
-							</form>
-					</div>
-				</div>
 					<div class="clearfix"> </div>
 
 				<!-- search-scripts -->

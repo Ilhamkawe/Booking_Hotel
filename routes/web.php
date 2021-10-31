@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Roomcontroller;
+use App\Http\Controllers\TypeController;
 use App\Models\TypeModel;
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,8 @@ Route::get("/", function(){
     $dataType = TypeModel::all();
         return view("front.pages.index")->with(["type" => $dataType]);
 });
+Route::get("/contact", function(){
+    return view("front.pages.contact");
+});
 Route::resource('/room', Roomcontroller::class);
+Route::resource('/admin/type', TypeController::class);

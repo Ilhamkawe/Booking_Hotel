@@ -31,7 +31,7 @@
 				<div class="text" style="height: 180px; overflow: hidden;">
 					<p >{{ $t->short_desc}}</p>
 				</div>
-				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
+				<a class="hvr-shutter-in-horizontal" href="{{route("room.show", $t->ID)}}">Book Now</a>
 			</div>				
 			@endforeach
 			<div class="clearfix"></div>

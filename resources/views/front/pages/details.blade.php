@@ -26,16 +26,12 @@
 			<div class="booking-form">
 				 <div class="col-md-6">			 
 					<form>
-						<h5>NAME</h5>
-						<input type="text" value="">
-						<h5>SUR NAME</h5>
+						<h5>NAMA</h5>
 						<input type="text" value="">
 						<h5>E-MAIL</h5>
 						<input type="text" value="">
-						<h5>PHONE</h5>
+						<h5>NO. TELEPHONE</h5>
 						<input type="text" value="">
-						<h5>TIME</h5>
-						<input type="text" value="" class="time">
 					</form>
 				</div>
 				<div class="col-md-6">		
